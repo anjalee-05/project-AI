@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jarvish - AI Assistant</title>
+    <!-- Use Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fa-solid fa-robot"></i>
+                <h2>Jarvish</h2>
+            </div>
+            <nav class="nav-menu">
+                <button class="nav-btn active"><i class="fa-solid fa-message"></i> Chat</button>
+                <button class="nav-btn"><i class="fa-solid fa-gear"></i> Settings</button>
+            </nav>
+            <div class="user-profile">
+                <div class="avatar">U</div>
+                <span>User</span>
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="chat-area">        node --version
+        npm --version
+            <header class="chat-header">
+                <div class="header-text">
+                    <h1>Good Evening, I am Jarvish</h1>
+                    <p class="status">Online and ready to assist</p>
+                    <div class="user-name">
+                        <label for="user-name-input">Chatting as</label>
+                        <input type="text" id="user-name-input" placeholder="Enter a name" autocomplete="off">
+                    </div>
+                </div>
+                <div class="jarvish-orb" id="jarvish-orb">
+                    <div class="core"></div>
+                    <div class="ring ring1"></div>
+                    <div class="ring ring2"></div>
+                </div>
+            </header>
+
+            <div class="messages-container" id="messages-container">
+                <!-- Messages will be injected here via JavaScript -->
+                <div class="message jarvish-message initial-greeting">
+                    <div class="avatar"><i class="fa-solid fa-robot"></i></div>
+                    <div class="content">
+                        <p>Hello! How can I help you today? You can type a message below or use the microphone to speak to me.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-area">
+                <div class="input-wrapper">
+                    <button id="mic-btn" class="icon-btn" title="Click to speak">
+                        <i class="fa-solid fa-microphone"></i>
+                    </button>
+                    <input type="text" id="chat-input" placeholder="Type a message or use voice..." autocomplete="off">
+                    <button id="send-btn" class="icon-btn send-btn" title="Send message">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </div>
+                <div id="listening-indicator" class="listening-indicator hidden">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <p>Listening...</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
